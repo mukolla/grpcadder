@@ -17,5 +17,5 @@ func (s *GRPCServer) Add(cnt context.Context, req *api.AddRequest) (*api.AddResp
 }
 
 func (s *GRPCServer) SetName(cnt context.Context, req *api.Person) (*api.PersonFullName, error) {
-	return &api.PersonFullName{FullName: req.GetName() + req.GetSubName()}, nil
+	return &api.PersonFullName{FullName: req.GetName() + " " + req.GetSubName()}, nil
 }
